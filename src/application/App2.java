@@ -4,6 +4,8 @@ import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
 
+import java.util.List;
+
 public class App2 {
     public static void main(String[] args) {
 
@@ -18,5 +20,12 @@ public class App2 {
         System.out.println("\n=== Test 2: Department findById() ===");
         department = departmentDao.findById(5);
         System.out.println(department);
+
+        //findAll operation test for table department
+        System.out.println("\n=== Test 3: Department findAll() ===");
+        List<Department> departmentList = departmentDao.findAll();
+        for (Department obj : departmentList){
+            System.out.println(obj);
+        }
     }
 }
