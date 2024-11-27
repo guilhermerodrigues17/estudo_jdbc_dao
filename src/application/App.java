@@ -22,5 +22,12 @@ public class App {
             System.out.println(obj);
         }
 
+        System.out.println("\n=== Test 3: seller findAll() ===");
+        sellerList = sellerDao.findAll();
+        for (Seller obj : sellerList) {
+            System.out.println(obj);
+        }
+
+
     }
 }
