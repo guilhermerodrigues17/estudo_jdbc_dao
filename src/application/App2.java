@@ -13,7 +13,7 @@ public class App2 {
         System.out.println("=== Test 1: Department insert() ===");
         DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
         Department department = new Department(null, "Food");
-        departmentDao.insert(department);
+        //departmentDao.insert(department);
         System.out.println("Inserted! New id = " + department.getId());
 
         //findById operation test for table department
@@ -30,8 +30,13 @@ public class App2 {
 
         //update operation test for table department
         System.out.println("\n=== Test 4: Department update() ===");
-        department = new Department(9, "Geek");
+        department = new Department(13, "Geek");
         departmentDao.update(department);
         System.out.println("Update completed");
+
+        //deleteById operation test for table department
+        System.out.println("\n=== Test 5: Department deleteById() ===");
+        departmentDao.deleteById(16);
+        System.out.println("Delete completed");
     }
 }
