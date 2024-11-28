@@ -13,7 +13,7 @@ public class App2 {
         System.out.println("=== Test 1: Department insert() ===");
         DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
         Department department = new Department(null, "Food");
-        //departmentDao.insert(department);
+        departmentDao.insert(department);
         System.out.println("Inserted! New id = " + department.getId());
 
         //findById operation test for table department
