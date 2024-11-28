@@ -27,5 +27,11 @@ public class App2 {
         for (Department obj : departmentList){
             System.out.println(obj);
         }
+
+        //update operation test for table department
+        System.out.println("\n=== Test 4: Department update() ===");
+        department = new Department(9, "Geek");
+        departmentDao.update(department);
+        System.out.println("Update completed");
     }
 }
